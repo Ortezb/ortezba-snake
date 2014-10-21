@@ -87,8 +87,14 @@ function snakeUpdate() {
     if(snakeDirection == "down") {
         snakeHeadY++;
     }
-    else if(snakeDirection = "right"){
+    else if(snakeDirection == "right"){
         snakeHeadX++;
+    }      
+    if(snakeDirection == "up") {
+        snakeHeadY--;
+    }   
+    else if(snakeDirection == "left"){
+        snakeHeadX--;
     }
     
     var snakeTail = snake.pop();
@@ -135,5 +141,11 @@ function keyboardHandler(event) {
     }
     else if(event.keyCode == "40" && snakeDirection != "up") {
         snakeDirection = "down";
+    }
+    if(event.keyCode == "37" && snakeDirection != "right") {
+        snakeDirection = "left";
+    } 
+    else if(event.keyCode == "38" && snakeDirection != "down") {
+        snakeDirection = "up";
     }
 }
