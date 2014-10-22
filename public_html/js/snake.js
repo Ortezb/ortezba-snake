@@ -61,7 +61,7 @@ function gameDraw() {
 
 function snakeInitialize() {
     snake = [];
-    snakeLength = 5;
+    snakeLength = 1;
     snakeSize = 20;
     snakeDirection = "down";
     
@@ -102,6 +102,8 @@ function snakeUpdate() {
     snakeTail.y = snakeHeadY;
     snake.unshift(snakeTail);
 }
+
+checkFoodCollisions(snakeHeadX, snakeHeadY);
 
 /* ---------------------------------------------------------------------------
  * Food Functions
@@ -147,5 +149,20 @@ function keyboardHandler(event) {
     } 
     else if(event.keyCode == "38" && snakeDirection != "down") {
         snakeDirection = "up";
+    }
+}
+
+/* ---------------------------------------------------------------------------
+ * Collision Handling
+ * ---------------------------------------------------------------------------
+ */ 
+
+function checkFoodCollisions(snakeHeadX, snakeHeadY) {
+    if(snakeHeadX == food.x && snakeHeadY == food.y) {
+        snake.push({
+            x: 0,
+            y: 0                                   
+        });
+        snakeLength++;
     }
 }
