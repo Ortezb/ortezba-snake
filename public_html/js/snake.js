@@ -97,13 +97,16 @@ function snakeUpdate() {
         snakeHeadX--;
     }
     
+    checkFoodCollisions(snakeHeadX, snakeHeadY);
+    checkWallCollisions(snakeHeadX, snakeHeadY);
+    
     var snakeTail = snake.pop();
     snakeTail.x = snakeHeadX;
     snakeTail.y = snakeHeadY;
     snake.unshift(snakeTail);
 }
 
-checkFoodCollisions(snakeHeadX, snakeHeadY);
+
 
 /* ---------------------------------------------------------------------------
  * Food Functions
@@ -164,5 +167,11 @@ function checkFoodCollisions(snakeHeadX, snakeHeadY) {
             y: 0                                   
         });
         snakeLength++;
+    }
+}
+
+function checkWallCollisions(snakeHeadX, snakeHeadY) {
+    if(snakeHeadX * snakeSize >= screenWidth ||snakeHeadX * snakeSize < 0) {
+        console.log("Wall Collision");
     }
 }
