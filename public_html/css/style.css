@@ -6,3 +6,8 @@ body { /*My body*/
 #game-screen { /*The id name of my canvas*/
     display: block;
 }
+
+#gameOver {
+    position: absolute;
+    visibility: hidden;
+}
