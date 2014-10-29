@@ -7,12 +7,12 @@ body { /*My body*/
     display: block;
 }
 
-#gameOver {
+#gameOver, #playHUD {
     position: absolute;
     visibility: hidden;
 }
 
-h1, h3 {
+h1, h2, h3 {
     font-family: 'Press Start 2P', cursive;
     color: black;
     text-align: center;
@@ -21,6 +21,7 @@ h1, h3 {
 .title {
     font-size: 62px;
     margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 #restartButton {
@@ -30,4 +31,8 @@ h1, h3 {
 
 #restartButton:hover {
     background-color: #ffffff;
+}
+
+#scoreboard {
+    margin: 0px;
 }
