@@ -252,5 +252,5 @@ function centerMenuPosition(menu) {
 }
 
 function drawScoreboard() {
-    scoreboard.innerHTML = "Length: " + snakeLength;
+    scoreboard.innerHTML = "Score: " + snakeLength;
 }
