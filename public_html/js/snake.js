@@ -251,6 +251,11 @@ function centerMenuPosition(menu) {
     menu.style.left = (screenWidth / 2) - (menu.offsetWidth / 2) + "px";
 }
 
+/* ---------------------------------------------------------------------------
+ * Scoreboard Functions
+ * ---------------------------------------------------------------------------
+ */
+
 function drawScoreboard() {
     scoreboard.innerHTML = "Score: " + snakeLength;
 }
