@@ -203,13 +203,12 @@ function checkWallCollisions(snakeHeadX, snakeHeadY) {
     if (snakeHeadX * snakeSize >= screenWidth || snakeHeadX * snakeSize < 0) {
         setState("GAME OVER");
     }
-}
-
-function checkWallCollisions(snakeHeadX, snakeHeadY) {
+    
     if (snakeHeadY * snakeSize >= screenHeight || snakeHeadY * snakeSize < 0) {
         setState("GAME OVER");
     }
 }
+
 
 function checkSnakeCollisions(snakeHeadX, snakeHeadY) {
     for(var index = 1; index < snake.length; index++) {
